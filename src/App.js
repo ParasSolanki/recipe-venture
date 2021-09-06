@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import * as ROUTES from "./constants/routes";
 import Loader from "./components/Loader";
 
@@ -13,7 +13,7 @@ const NotFound = lazy(() => import("./modules/errors/404Page"));
 
 export default function App() {
   return (
-    <Router>
+    <HashRouter>
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path={ROUTES.HOME} exact component={Home} />
@@ -25,6 +25,6 @@ export default function App() {
           <Route component={NotFound} />
         </Switch>
       </Suspense>
-    </Router>
+    </HashRouter>
   );
 }
