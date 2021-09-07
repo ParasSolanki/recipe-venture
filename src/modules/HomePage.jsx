@@ -14,7 +14,7 @@ export default function HomePage({ recipes }) {
             <div className="w-full lg:w-6/12 mb-10 lg:mb-0">
               <div className="h-64 sm:h-72 rounded shadow-md overflow-hidden">
                 <img
-                  src="/images/banner.jpg"
+                  src="images/banner.jpg"
                   alt="Banner"
                   className="w-full h-full object-cover"
                 />

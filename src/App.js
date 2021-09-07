@@ -3,6 +3,8 @@ import { HashRouter, Switch, Route } from "react-router-dom";
 import * as ROUTES from "./constants/routes";
 import Loader from "./components/Loader";
 
+import "./styles/tailwind.css";
+
 const Home = lazy(() => import("./pages/Home"));
 const Recipes = lazy(() => import("./pages/Recipes"));
 const About = lazy(() => import("./pages/About"));
