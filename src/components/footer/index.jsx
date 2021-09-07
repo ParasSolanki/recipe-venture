@@ -29,7 +29,7 @@ export default function Footer() {
               title="Recipe Venture"
             >
               <span className="w-full h-full block">
-                <img src="/logo.png" alt="logo" className="w-full h-full" />
+                <img src="logo.png" alt="logo" className="w-full h-full" />
               </span>
             </Link>
           </div>

@@ -21,7 +21,7 @@ export default function MobileMenu({ links, mobileMenu, setMobileMenu }) {
             >
               <span className="w-full h-full block">
                 {/* <Logo /> */}
-                <img src="/logo.png" alt="logo" className="w-full h-full" />
+                <img src="logo.png" alt="logo" className="w-full h-full" />
               </span>
             </Link>
           </div>

@@ -13,7 +13,7 @@ const NotFound = lazy(() => import("./modules/errors/404Page"));
 
 export default function App() {
   return (
-    <HashRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path={ROUTES.HOME} exact component={Home} />
