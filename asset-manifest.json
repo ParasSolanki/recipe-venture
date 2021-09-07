@@ -2,13 +2,13 @@
   "files": {
     "static/js/0.3597b4be.chunk.js": "/recipe-venture/static/js/0.3597b4be.chunk.js",
     "static/js/0.3597b4be.chunk.js.map": "/recipe-venture/static/js/0.3597b4be.chunk.js.map",
-    "main.css": "/recipe-venture/static/css/main.85e0219b.chunk.css",
-    "main.js": "/recipe-venture/static/js/main.561ee897.chunk.js",
-    "main.js.map": "/recipe-venture/static/js/main.561ee897.chunk.js.map",
+    "main.css": "/recipe-venture/static/css/main.7d7977a0.chunk.css",
+    "main.js": "/recipe-venture/static/js/main.b9a5b8a2.chunk.js",
+    "main.js.map": "/recipe-venture/static/js/main.b9a5b8a2.chunk.js.map",
     "runtime-main.js": "/recipe-venture/static/js/runtime-main.e35baefa.js",
     "runtime-main.js.map": "/recipe-venture/static/js/runtime-main.e35baefa.js.map",
-    "static/js/3.3175b4ac.chunk.js": "/recipe-venture/static/js/3.3175b4ac.chunk.js",
-    "static/js/3.3175b4ac.chunk.js.map": "/recipe-venture/static/js/3.3175b4ac.chunk.js.map",
+    "static/js/3.049dbba6.chunk.js": "/recipe-venture/static/js/3.049dbba6.chunk.js",
+    "static/js/3.049dbba6.chunk.js.map": "/recipe-venture/static/js/3.049dbba6.chunk.js.map",
     "static/js/4.2c475c15.chunk.js": "/recipe-venture/static/js/4.2c475c15.chunk.js",
     "static/js/4.2c475c15.chunk.js.map": "/recipe-venture/static/js/4.2c475c15.chunk.js.map",
     "static/js/5.1d9b94f8.chunk.js": "/recipe-venture/static/js/5.1d9b94f8.chunk.js",
@@ -24,14 +24,14 @@
     "static/js/10.2ef56c40.chunk.js": "/recipe-venture/static/js/10.2ef56c40.chunk.js",
     "static/js/10.2ef56c40.chunk.js.map": "/recipe-venture/static/js/10.2ef56c40.chunk.js.map",
     "index.html": "/recipe-venture/index.html",
-    "static/css/main.85e0219b.chunk.css.map": "/recipe-venture/static/css/main.85e0219b.chunk.css.map",
-    "static/js/3.3175b4ac.chunk.js.LICENSE.txt": "/recipe-venture/static/js/3.3175b4ac.chunk.js.LICENSE.txt",
+    "static/css/main.7d7977a0.chunk.css.map": "/recipe-venture/static/css/main.7d7977a0.chunk.css.map",
+    "static/js/3.049dbba6.chunk.js.LICENSE.txt": "/recipe-venture/static/js/3.049dbba6.chunk.js.LICENSE.txt",
     "static/media/tailwind.css": "/recipe-venture/static/media/Poppins-SemiBoldItalic.aaf54f2e.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.e35baefa.js",
-    "static/js/3.3175b4ac.chunk.js",
-    "static/css/main.85e0219b.chunk.css",
-    "static/js/main.561ee897.chunk.js"
+    "static/js/3.049dbba6.chunk.js",
+    "static/css/main.7d7977a0.chunk.css",
+    "static/js/main.b9a5b8a2.chunk.js"
   ]
 }
