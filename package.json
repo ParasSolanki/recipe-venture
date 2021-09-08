@@ -2,7 +2,7 @@
   "name": "recipe-venture",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://parasSolanki.github.io/recipe-venture",
+  "homepage": "https://recipe-venture.com",
   "dependencies": {
     "@craco/craco": "^6.2.0",
     "@testing-library/jest-dom": "^5.11.4",
