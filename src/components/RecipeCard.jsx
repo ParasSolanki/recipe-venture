@@ -20,7 +20,7 @@ export default function RecipeCard({ recipe }) {
           {recipe.excerpt}
         </p>
         <Link
-          to={`recipes/${recipe.slug}`}
+          to={`/recipes/${recipe.slug}`}
           className="inline-flex items-center justify-between text-white text-sm px-3 py-1 bg-purple-500 hover:bg-purple-400 dark:hover:bg-purple-400  rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-700 focus:ring-purple-500"
         >
           Read More
