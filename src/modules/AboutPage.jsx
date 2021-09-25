@@ -44,29 +44,7 @@ export default function AboutPage() {
               Thanks for visiting our Site!
             </p>
             <p className="text-gray-500 dark:text-gray-400 mb-4">
-              Download our app today! or Follow us on Instagram{" "}
-              <span className="text-gray-600 dark:text-gray-300">
-                <a
-                  href="https://www.instagram.com/recipeventure"
-                  title="Recipe Venture"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-block ml-1"
-                >
-                  @recipeventure
-                </a>
-              </span>
-              <span className="text-gray-600 dark:text-gray-300">
-                <a
-                  href="https://www.instagram.com/recipeventureapp"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-block ml-1"
-                  title="Recipe Venture App"
-                >
-                  @recipeventureapp
-                </a>
-              </span>
+              Download our app today!
             </p>
           </div>
         </div>

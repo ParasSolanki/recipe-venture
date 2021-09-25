@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle";
-import { links } from "../../fixtures/links";
+import { links, socialLinks } from "../../fixtures/links";
 import * as ROUTES from "../../constants/routes";
 
 export default function Footer() {
@@ -33,8 +33,22 @@ export default function Footer() {
               </span>
             </Link>
           </div>
-          <div>
+          <div className="mb-6">
             <ThemeToggle />
+          </div>
+          <div className="grid gap-3 grid-cols-5 sm:grid-cols-5">
+            {socialLinks.map((item, index) => (
+              <a
+                className="w-11 h-11 flex justify-center items-center bg-gray-300 text-purple-500 hover:bg-purple-500 hover:text-white cursor-pointer rounded-full dark:bg-gray-700 dark:text-white dark:hover:bg-purple-500"
+                key={index}
+                href={item.href}
+                title={item.name}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {item?.icon}
+              </a>
+            ))}
           </div>
         </div>
       </div>
