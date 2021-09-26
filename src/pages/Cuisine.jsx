@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
 
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import Loader from "../components/Loader";
+import useHasCuisine from "../hooks/useHasCuisine";
 import useRecipes from "../hooks/useRecipes";
 import CuisinesSlugRecipesPage from "../modules/CuisinesSlugRecipesPage";
 import { filterCuisineRecipes } from "../utils/filter-cuisine-recipes";
 
 export default function Cuisine() {
+  const { slug } = useParams();
   const [loading, setLoading] = useState(true);
   const [cuisine, setCuisine] = useState("");
   const { recipes: data } = useRecipes();
-  const { slug } = useParams();
-  // const history = useHistory();
+  const { found } = useHasCuisine(slug);
+
+  const history = useHistory();
   const recipes = filterCuisineRecipes(data, slug);
 
   // uppercase first letter
@@ -24,11 +27,13 @@ export default function Cuisine() {
   }, []);
 
   useEffect(() => {
-    if (recipes.length > 0) {
+    if (found === true) {
       setCuisine(capitalizeFirstLetter(slug.replaceAll("-", " ")));
       setLoading(false);
+    } else if (found === false) {
+      history.push("/*");
     }
-  }, [recipes, slug]);
+  }, [recipes, slug, found, history]);
 
   return !loading ? (
     <CuisinesSlugRecipesPage cuisine={cuisine} recipes={recipes} />

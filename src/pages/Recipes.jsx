@@ -7,6 +7,8 @@ export default function Recipes() {
   const { recipes: data } = useRecipes();
   const recipes = filterRecipesByTime(data);
 
+  console.log(recipes);
+
   useEffect(() => {
     document.title = "Recipes | Recipe Venture";
   }, []);

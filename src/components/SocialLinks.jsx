@@ -7,7 +7,7 @@ import * as PATHS from "../constants/paths";
 
 export default function SocialLinks({ recipe }) {
   const { name, excerpt, slug } = recipe;
-  const url = `${PATHS.URL}${slug}`;
+  const url = `${PATHS.URL}/${slug}`;
 
   return (
     <div className="fixed w-full left-0 bottom-0 z-50 flex flex-row flex-shrink-0 items-center justify-between lg:w-auto lg:block lg:bottom-1/3 2xl:bottom-1/2">
