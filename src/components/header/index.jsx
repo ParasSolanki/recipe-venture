@@ -5,6 +5,7 @@ import MenuIcon from "../../icons/MenuIcon";
 import MobileMenu from "../mobileMenu";
 import { links } from "../../fixtures/links";
 import * as ROUTES from "../../constants/routes";
+import SearchBar from "../SearchBar";
 
 export default function Header() {
   const [scrollPos, setScrollPos] = useState(0);
@@ -37,22 +38,7 @@ export default function Header() {
       <div className="w-full h-full flex items-center justify-center">
         <div className="container mx-auto px-4 opacity-100">
           <div className="flex justify-between items-center">
-            <div className="">
-              <Link
-                to={ROUTES.HOME}
-                className="w-40 h-16 block text-gray-900 text-xl dark:text-white rounded focus:outline-none"
-                title="Recipe Venture"
-              >
-                <span className="w-full h-full block">
-                  {/* <Logo /> */}
-                  <img src="logo.png" alt="logo" className="w-full h-full" />
-                </span>
-              </Link>
-            </div>
-            <div className="flex justify-between items-center">
-              <div className="hidden sm:block">
-                <Nav links={links} />
-              </div>
+            <div className="flex items-center">
               <div className="block sm:hidden">
                 {mobileMenu && (
                   <div>
@@ -69,6 +55,24 @@ export default function Header() {
                 >
                   <MenuIcon />
                 </button>
+              </div>
+              <Link
+                to={ROUTES.HOME}
+                className="w-40 h-16 block text-gray-900 text-xl dark:text-white rounded focus:outline-none"
+                title="Recipe Venture"
+              >
+                <span className="w-full h-full block">
+                  {/* <Logo /> */}
+                  <img src="logo.png" alt="logo" className="w-full h-full" />
+                </span>
+              </Link>
+            </div>
+            <div className="flex justify-between items-center">
+              <div className="hidden sm:block">
+                <Nav links={links} />
+              </div>
+              <div className="sm:ml-6">
+                <SearchBar />
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function RecipeArticle({ recipe }) {
   const { name, slug, cuisine, image, prepTime, cuisineSlug } = recipe;
@@ -19,7 +20,14 @@ export default function RecipeArticle({ recipe }) {
         </Link>
       </div>
       <div className="mb-6 w-full h-64 sm:h-96">
-        <img className="w-full h-full object-cover" src={image} alt={slug} />
+        <LazyLoadImage
+          src={image}
+          alt={slug}
+          width="100%"
+          height="100%"
+          effect="blur"
+          className="w-full h-full object-cover"
+        />
       </div>
       <div className="mb-4">
         <p className="text-2xl text-gray-500 dark:text-gray-300 mb-4">

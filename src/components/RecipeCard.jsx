@@ -1,14 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ArrowNarrowRightIcon from "../icons/ArrowNarrowRightIcon";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function RecipeCard({ recipe }) {
   return (
     <div className="max-w-sm mx-auto sm:mx-0 bg-gray-100 dark:bg-gray-700 rounded-md shadow-lg overflow-hidden">
       <div className="w-full h-44">
-        <img
+        <LazyLoadImage
           src={recipe.image}
           alt={recipe.name}
+          width="100%"
+          height="100%"
+          effect="blur"
           className="w-full h-full object-cover"
         />
       </div>

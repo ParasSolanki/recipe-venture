@@ -1,20 +1,29 @@
-import { lazy, Suspense } from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
+import { RecipeContext } from "./contexts/recipe";
+import useRecipes from "./hooks/useRecipes";
 import * as ROUTES from "./constants/routes";
-import Loader from "./components/Loader";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import Home from "./pages/Home";
+import Recipes from "./pages/Recipes";
+import About from "./pages/About";
+import Cuisines from "./pages/Cuisines";
+import Recipe from "./pages/Recipe";
+import Cuisine from "./pages/Cuisine";
+import NotFound from "./pages/NotFound";
 
-const Home = lazy(() => import("./pages/Home"));
-const Recipes = lazy(() => import("./pages/Recipes"));
-const About = lazy(() => import("./pages/About"));
-const Cuisines = lazy(() => import("./pages/Cuisines"));
-const Recipe = lazy(() => import("./pages/Recipe"));
-const Cuisine = lazy(() => import("./pages/Cuisine"));
-const NotFound = lazy(() => import("./modules/errors/404Page"));
+// const Home = lazy(() => import("./pages/Home"));
+// const Recipes = lazy(() => import("./pages/Recipes"));
+// const About = lazy(() => import("./pages/About"));
+// const Cuisines = lazy(() => import("./pages/Cuisines"));
+// const Recipe = lazy(() => import("./pages/Recipe"));
+// const Cuisine = lazy(() => import("./pages/Cuisine"));
+// const NotFound = lazy(() => import("./modules/errors/404Page"));
 
 export default function App() {
+  const { recipes } = useRecipes();
   return (
     <HashRouter>
-      <Suspense fallback={<Loader />}>
+      <RecipeContext.Provider value={{ recipes }}>
         <Switch>
           <Route path={ROUTES.HOME} exact component={Home} />
           <Route path={ROUTES.RECIPES} exact component={Recipes} />
@@ -24,7 +33,7 @@ export default function App() {
           <Route path={ROUTES.CUISINE} exact component={Cuisine} />
           <Route component={NotFound} />
         </Switch>
-      </Suspense>
+      </RecipeContext.Provider>
     </HashRouter>
   );
 }

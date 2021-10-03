@@ -6,13 +6,22 @@ import TwitterIcon from "../icons/social/TwitterIcon";
 import * as PATHS from "../constants/paths";
 
 export default function SocialLinks({ recipe }) {
-  const { name, excerpt, slug } = recipe;
-  const url = `${PATHS.URL}/${slug}`;
+  const { name, slug } = recipe;
+  const url = encodeURIComponent(`${PATHS.URL}/${slug}`);
+  const facebookURL = `https://www.facebook.com/sharer.php?u=${url}`;
+  const twitterURL = `https://twitter.com/intent/tweet?url=${url}&text=${name}`;
+  const linkedinURL = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${name.replace(
+    / /g,
+    "%20"
+  )}`;
+  const mailURL = `mailto:?subject=${name}&body=Check%20out%20this%20recipe%20on%20${encodeURIComponent(
+    url
+  )}`;
 
   return (
     <div className="fixed w-full left-0 bottom-0 z-50 flex flex-row flex-shrink-0 items-center justify-between lg:w-auto lg:block lg:bottom-1/3 2xl:bottom-1/2">
       <a
-        href={`https://www.facebook.com/sharer.php?u=${url}`}
+        href={facebookURL}
         title="Facebook"
         tabIndex="0"
         target="_blank"
@@ -27,7 +36,7 @@ export default function SocialLinks({ recipe }) {
         </span>
       </a>
       <a
-        href={`https://twitter.com/intent/tweet?text=${name} #RecipeVenture ${url}`}
+        href={twitterURL}
         title="Twitter"
         tabIndex="0"
         target="_blank"
@@ -43,7 +52,7 @@ export default function SocialLinks({ recipe }) {
         </span>
       </a>
       <a
-        href={`https://www.linkedin.com/shareArticle?mini=true&amp;url=${url}&amp;title=${name}&amp;summary=${excerpt}&amp;source=Recipe Venture`}
+        href={linkedinURL}
         title="LinkedIn"
         tabIndex="0"
         target="_blank"
@@ -59,7 +68,7 @@ export default function SocialLinks({ recipe }) {
         </span>
       </a>
       <a
-        href={`mailto:?subject=${name}&amp;body=Check out this recipe on ${url}`}
+        href={mailURL}
         title="Email"
         tabIndex="0"
         target="_blank"

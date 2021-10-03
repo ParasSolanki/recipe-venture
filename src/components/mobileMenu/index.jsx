@@ -11,7 +11,7 @@ export default function MobileMenu({ links, mobileMenu, setMobileMenu }) {
         className="absolute w-full h-screen top-0 left-0 bg-black opacity-30 dark:bg-black"
         onClick={() => setMobileMenu(!mobileMenu)}
       ></div>
-      <div className="absolute py-8 top-0 right-0 h-screen w-80 overflow-hidden bg-white dark:bg-gray-700 shadow-2xl">
+      <div className="absolute py-8 top-0 left-0 h-screen w-80 overflow-hidden bg-white dark:bg-gray-700 shadow-2xl">
         <div className="flex items-center justify-between px-5 mb-10">
           <div className="">
             <Link

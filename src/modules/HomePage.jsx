@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import AppLayout from "../modules/layouts/AppLayout";
 import RecipeCard from "../components/RecipeCard";
-import * as ROUTES from "../constants/routes";
 import ArrowNarrowRightIcon from "../icons/ArrowNarrowRightIcon";
+import * as ROUTES from "../constants/routes";
 
 export default function HomePage({ recipes }) {
   return (
@@ -13,9 +14,12 @@ export default function HomePage({ recipes }) {
           <div className="flex flex-col lg:flex-row-reverse justify-between items-start">
             <div className="w-full lg:w-6/12 mb-10 lg:mb-0">
               <div className="h-64 sm:h-72 rounded shadow-md overflow-hidden">
-                <img
+                <LazyLoadImage
                   src="images/banner.jpg"
                   alt="Banner"
+                  width="100%"
+                  height="100%"
+                  effect="blur"
                   className="w-full h-full object-cover"
                 />
               </div>
