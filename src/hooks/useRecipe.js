@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import * as PATHS from "../constants/paths";
 
 export default function useRecipe(slug) {
-  const [recipe, setRecipe] = useState([]);
+  const [recipe, setRecipe] = useState({});
+  const [loading, setLoading] = useState(true);
   const [found, setFound] = useState(null);
 
   useEffect(() => {
@@ -11,12 +12,14 @@ export default function useRecipe(slug) {
       const { recipes } = await data.json();
       const res = recipes.filter((recipe) => recipe.slug === slug);
       if (res.length > 0) {
-        setFound(true);
         setRecipe(res[0]);
+        setFound(true);
+        setLoading(false);
       } else if (res.length === 0) {
         setFound(false);
       }
     };
+    setLoading(true);
     fetchRecipes();
     return () => {
       setRecipe([]);
@@ -26,5 +29,6 @@ export default function useRecipe(slug) {
   return {
     recipe,
     found,
+    loading,
   };
 }
