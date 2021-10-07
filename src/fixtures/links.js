@@ -30,6 +30,12 @@ export const links = [
     href: ROUTES.ABOUT_US,
     title: "About Us",
   },
+  {
+    id: 5,
+    name: "Privacy Policy",
+    href: ROUTES.PRIVACY,
+    title: "Privacy Policy",
+  },
 ];
 
 export const socialLinks = [

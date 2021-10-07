@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="w-full py-16 bg-gray-200 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="flex flex-col justify-center items-center">
-          <div className="max-w-2xl mx-auto w-64 sm:w-96 grid gap-y-2 grid-cols-2 sm:grid-cols-4 text-center mb-6">
+          <div className="max-w-2xl mx-auto grid gap-y-2 grid-cols-2 sm:grid-cols-5 text-center mb-6">
             {links.map((link, index) => (
               <Link
                 to={link.href}
@@ -46,7 +46,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-                {item?.icon}
+                {item.icon}
               </a>
             ))}
           </div>

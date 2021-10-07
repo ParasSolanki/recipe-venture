@@ -1,5 +1,7 @@
 import React from "react";
 import AppLayout from "./layouts/AppLayout";
+import * as PATHS from "../constants/paths";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function AboutPage() {
   return (
@@ -46,6 +48,21 @@ export default function AboutPage() {
             <p className="text-gray-500 dark:text-gray-400 mb-4">
               Download our app today!
             </p>
+            <a
+              href={PATHS.PLAYSTORE_URL}
+              className="inline-block"
+              target="_blank"
+              rel="noreferrer noopener"
+              title="Google Play"
+            >
+              <LazyLoadImage
+                src="/images/playstore-img.png"
+                alt="Google Play"
+                width="180"
+                height="100"
+                className="object-cover"
+              />
+            </a>
           </div>
         </div>
       </section>

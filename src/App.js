@@ -3,10 +3,12 @@ import { RecipeContext } from "./contexts/recipe";
 import useRecipes from "./hooks/useRecipes";
 import * as ROUTES from "./constants/routes";
 import "react-lazy-load-image-component/src/effects/blur.css";
+
 import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
 import About from "./pages/About";
 import Cuisines from "./pages/Cuisines";
+import Privacy from "./pages/Privacy";
 import Recipe from "./pages/Recipe";
 import Cuisine from "./pages/Cuisine";
 import NotFound from "./pages/NotFound";
@@ -29,6 +31,7 @@ export default function App() {
           <Route path={ROUTES.RECIPES} exact component={Recipes} />
           <Route path={ROUTES.ABOUT_US} exact component={About} />
           <Route path={ROUTES.CUISINES} exact component={Cuisines} />
+          <Route path={ROUTES.PRIVACY} exact component={Privacy} />
           <Route path={ROUTES.RECIPE} exact component={Recipe} />
           <Route path={ROUTES.CUISINE} exact component={Cuisine} />
           <Route component={NotFound} />
