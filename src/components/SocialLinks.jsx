@@ -14,9 +14,7 @@ export default function SocialLinks({ recipe }) {
     / /g,
     "%20"
   )}`;
-  const mailURL = `mailto:?subject=${name}&body=Check%20out%20this%20recipe%20on%20${encodeURIComponent(
-    url
-  )}`;
+  const mailURL = `mailto:?subject=${name}&body=Check%20out%20this%20recipe%20on%20${url}`;
 
   return (
     <div className="fixed w-full left-0 bottom-0 z-50 flex flex-row flex-shrink-0 items-center justify-between lg:w-auto lg:block lg:bottom-1/3 2xl:bottom-1/2">

@@ -22,6 +22,7 @@ export default function CuisinesPage({ cuisines }) {
               >
                 <Link
                   to={`/cuisines/${cuisine
+                    .trim()
                     .split(" ")
                     .join("-")
                     .toLowerCase()}/recipes`}
